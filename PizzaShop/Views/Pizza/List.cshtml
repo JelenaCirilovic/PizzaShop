@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Pie>
+<div>
+    @foreach (var p in Model)
+    {
+        <div>
+            <h2>@p.GetName();</h2>
+            <h4>@p.GetDescription(); </h4>
+        </div>
+
+
+    }
+
+</div>
