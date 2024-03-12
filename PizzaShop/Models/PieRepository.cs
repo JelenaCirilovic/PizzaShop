@@ -1,39 +1,29 @@
-﻿using PizzaShop.Models;
-
-namespace PizzaShop.Models
+﻿namespace PizzaShop.Models
 {
     public class PieRepository : IPieRepository
     {
+        public List<Pie> Pies { get; set; } = new List<Pie>();
 
-        public List<Pie> piesCollection { get; set; }
-
-        private List<Pie> pies = new List<Pie>();
-
-        public Pie GetPieById(int PieId)
+        public Pie GetPieById(int pieId)
         {
-            foreach ( var pie in pies )
+            foreach (var pie in Pies)
             {
-                if (pie.GetPieId() == PieId)
-                return pie;
+                if (pie.GetPieId() == pieId)
+
+                    return pie;
             }
+
             return null;
         }
+
         public PieRepository()
         {
-
-            pies = new List<Pie>();
-
-            Pie pie1 = new Pie(1, "Pita sa jabukama", "Mala pita sa jabukama", (decimal)1.25,true, true);
-            pies.Add(pie1);
+            Pie pie1 = new Pie(1, "Pita sa jabukama", "Mala pita sa jabukama", (decimal)1.25, true, true);
+            Pies.Add(pie1);
             Pie pie2 = new Pie(2, "Makovnjača", "Velika štrudla sa makom", (decimal)8.35, true, false);
-            pies.Add(pie2);
+            Pies.Add(pie2);
             Pie pie3 = new Pie(3, "Burek", "Mastan burek sa sirom", 6.5m, false, false);
-            pies.Add(pie3);
-        
+            Pies.Add(pie3);
         }
-
-
-
-
     }
 }

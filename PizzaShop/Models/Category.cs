@@ -4,7 +4,7 @@
     {
         private int CategoryID;
         private string CategoryName;
-        private string Description; 
+        private string Description;
 
         public Category(int categoryID, string categoryName, string description)
         {
@@ -13,14 +13,14 @@
             Description = description;
         }
 
-        public Category () {}
+        public Category() { }
 
-        public int GetCategoryId () { return CategoryID; }
-        public string GetCategoryName () {  return CategoryName; }
-        public string GetDescription () { return Description; }
-        public void SetCategoryID (int categoryID) {  CategoryID = categoryID; }
-        public void SetCategoryName (string categoryName) {  CategoryName = categoryName; }
-        public void SetDescription (string description) {  Description = description; }
+        public int GetCategoryId() { return CategoryID; }
+        public string GetCategoryName() { return CategoryName; }
+        public string GetDescription() { return Description; }
+        public void SetCategoryID(int categoryID) { CategoryID = categoryID; }
+        public void SetCategoryName(string categoryName) { CategoryName = categoryName; }
+        public void SetDescription(string description) { Description = description; }
 
 
     }

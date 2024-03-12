@@ -1,8 +1,7 @@
 ﻿namespace PizzaShop.Models
 {
-    public class CategoryRepository: IcategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
-        public CategoryRepository() { }
         public IEnumerable<Category> Categories { get; }
 
         private List<Category> categories = new List<Category>();
