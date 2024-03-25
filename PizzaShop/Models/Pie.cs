@@ -9,6 +9,8 @@
         private bool IsPieOfTheWeek;
         private bool InStock;
 
+        public Category Category { get; set; }
+
         public Pie() { }
         public Pie(int PieId, string Name, string Description, decimal Price, bool IsPieOfTheWeek, bool InStock)
         {

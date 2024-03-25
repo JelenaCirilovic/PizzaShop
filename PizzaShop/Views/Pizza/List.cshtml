@@ -1,11 +1,30 @@
 ﻿@model IEnumerable<Pie>
 
 <div>
-    @foreach (var p in Model)
-    {
-        <div>
-            <h2>@p.GetName()</h2>
-            <h4>@p.GetDescription()</h4>
-        </div>
-    }
+    <h1>List of Pies</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th> Description </th>
+                <th>Price</th>
+                <th>Is Available</th>
+                <th>Pie of the week</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pie in Model)
+            {
+                <tr>
+                    <td>@pie.GetName()</td>
+                    <td>@pie.GetDescription()</td>
+                    <td>@pie.GetPrice() </td>
+                    <td>@(pie.GetInStock()    ) ? "Yes" : "No")</td>
+                    <td>@(pie.GetIsPieOfTheWeek()) ? "Yes" : "No")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

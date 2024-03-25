@@ -5,6 +5,7 @@
         private int CategoryID;
         private string CategoryName;
         private string Description;
+        public IEnumerable<Pie> Pies { get; set; }
 
         public Category(int categoryID, string categoryName, string description)
         {
