@@ -50,7 +50,7 @@
 
             foreach (var pie in Pies)
             {
-                pie.Category = new Category(4, "Veganske pite", "prfipremljeno sveže za vas");
+                pie.Category = new Category(4, "Veganske pite", "pripremljeno sveže za vas");
             }
 
 

@@ -11,6 +11,7 @@
                 <th>Price</th>
                 <th>Is Available</th>
                 <th>Pie of the week</th>
+                <th>category</th>
                 
             </tr>
         </thead>
@@ -21,8 +22,9 @@
                     <td>@pie.GetName()</td>
                     <td>@pie.GetDescription()</td>
                     <td>@pie.GetPrice() </td>
-                    <td>@(pie.GetInStock()    ) ? "Yes" : "No")</td>
-                    <td>@(pie.GetIsPieOfTheWeek()) ? "Yes" : "No")</td>
+                    <td>@(pie.GetInStock()    )</td>
+                    <td>@(pie.GetIsPieOfTheWeek()) </td>
+                    <td>@(pie.Category.GetCategoryName()) </td>
                 </tr>
             }
         </tbody>
